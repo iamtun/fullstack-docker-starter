@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: { 
       port: 3000,
+      host: true,
     },
     define: {
       'process.env': env // Fix process.env is undefined

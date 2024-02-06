@@ -1,0 +1,19 @@
+﻿FROM node:alpine3.18
+
+# Fetching the minified node image on apline linux
+FROM node:alpine3.18
+
+# Declaring env
+ENV NODE_ENV development
+
+# Setting up the work directory
+WORKDIR /frontend-app
+
+# Copying all the files in our project
+COPY . .
+
+# Installing dependencies
+RUN yarn install
+
+# Starting our application
+CMD [ "yarn", "dev"]
